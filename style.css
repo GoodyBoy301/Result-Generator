@@ -1,0 +1,218 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('cartographer.png');
+  background-color: #022409;
+  color:white;
+  flex-direction: column;
+  overflow: hidden;
+}
+header{
+	display: flex;
+	position: absolute;
+	top: 2em;
+	font-family: system-ui;
+	background-color: #011c0d;
+	width: 100%;
+	height: 4.5rem;
+	border-bottom-left-radius: 50%;
+	border-bottom-right-radius: 50%;
+	justify-content: center;
+	flex-wrap: wrap;
+	color: #f2e8cf;
+	box-shadow: 0px 20px 20px 0px #02240982;
+}
+aside{
+ height: 4rem;
+ position: absolute;
+ top: 0;
+ width: 100%;
+ z-index: -1;
+ background-color: #011c0d;
+}
+main .head{
+ background-color: #011c0d;
+ width: 100%;
+ display: flex;
+ justify-content: center;
+ border: 2px solid #01170b;
+ border-width: 5px 0 0;
+ position: absolute;
+ top: calc(7.3em + 2rem);
+ border-top-left-radius: 100vw;
+ border-top-right-radius: 100vw;
+ left: 0;
+ height: 2em;
+ transition: all cubic-bezier(0.95, -0.4, 0.58, 1) 0.2s, color 12.6s;
+ transform: translateY(100vh);
+ will-change: transform;
+}
+main .body{
+ background-color: #011c0d;
+ width: 100%;
+ display: flex;
+ justify-content: flex-start;
+ /* border: 2px solid #01170b; */
+ /* border-width: 5px 0 0; */
+ position: absolute;
+ /* border-top-left-radius: 100vw; */
+ /* border-top-right-radius: 100vw; */
+ left: 0;
+ height: calc(200vh);
+ transition: all cubic-bezier(0.95, -0.4, 0.58, 1) 0.2s, color 12.6s;
+ top: calc(11.2em);
+ transform: translateY(100vh);
+ will-change: transform;
+ flex-direction: column;
+ align-items: center;
+}
+h1{
+ font-size: 1.6rem;
+}
+h2 {
+  font-weight: 100;
+  font-size: 1.3rem;
+  min-width: 100%;
+  text-align: center;
+}
+h3{
+   font-weight: 100;
+   font-size: 1.2rem;
+   max-width: 98vw;
+   text-align: center;
+   font-family: monospace;
+   margin-top: 2vh;
+}
+h4{
+   font-weight: 100;
+   font-size: 1.3rem;
+   min-width: 100%;
+   text-align: center;
+   font-family: monospace;
+}
+h5{
+   font-weight: 100;
+   font-size: 1.2rem;
+   max-width: 100vw;
+   text-align: center;
+   font-family: monospace;
+   margin-top: 1vh;
+   border-bottom: 4.2px double;
+   /* text-decoration: underline; */
+   min-width: 15vw;
+}
+h6{
+   font-weight: 100;
+   font-size: 1rem;
+   min-width: 100%;
+   text-align: center;
+   font-family: sans-serif;
+   margin-top: 0.5vw;
+}
+.arrow{
+ position: absolute;
+ left: 1em;
+ display: flex;
+ margin: 12px 0;
+}
+label{
+ transition: transform cubic-bezier(0.95, -0.4, 0.58, 1) 0.2s;
+ font-family: monospace;
+ text-align: center;
+}
+label:hover{
+	
+}
+input:focus + label{
+ transform: translateY(-0.2em)
+}
+.input{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column-reverse;
+}
+.input input{
+	 transition: border  cubic-bezier(0.95, -0.4, 0.58, 1) 8.2s;
+	 --border-radius: 24px;
+	 --border-width: 8px;
+	 -webkit-appearance: none;
+	 -moz-appearance: none;
+	 appearance: none;
+	 position: relative;
+	 padding: 0.5em 1em;
+	 border: 0;
+	 background-color: transparent;
+	 font-family: "Montserrat", sans-serif;
+	 font-size:1.5rem;
+	 font-weight: 600;
+	 color: #fff;
+	 max-width: 80%;
+	 text-align: center;
+	 margin: 0.2em 0;
+}
+
+button{
+ background-color: #00000000;
+ color: #6a994e;
+ height: 2rem;
+ width: 7rem;
+ border: 1px solid;
+ margin-top: 0.2em;
+ transition: all cubic-bezier(0.91, -0.09, 0.31, 1.19) 0.9s;
+ will-change: top;
+}
+
+.btnup{
+ /*top: calc(6.5em - 50vh)*/
+ transform: translateY(calc(6.5em - 50vh));
+}
+
+.movebody{
+ transform: translateY(0vh)
+}
+
+.scores{
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+ justify-items: center;
+ padding: 1.5vh 5px;
+ font-family: monospace;
+ font-size: 0.9rem;
+}
+
+.wrapper{min-width: 80%;margin-top: 3vh;}
+
+.scores:first-of-type p{
+ text-decoration-line: underline;
+}
+span{
+ display: flex;
+}
+.shuffle{
+ width: 2rem;
+ margin-left: 0.3rem;
+ animation: shake 2s infinite
+}
+
+ label:first-of-type{
+  font-size: 0.7rem;
+  color: rgb(117 117 117);
+  transform: translateY(20vh);
+  max-width: 60%;
+  position: absolute;
+ }
+
+@keyframes shake {
+ 5% {transform: rotate(10deg)}
+ 10% {transform: rotate(-10deg)}
+ 15% {transform: rotate(10deg)}
+ 20% {transform: rotate(0deg)}
+}
