@@ -963,8 +963,8 @@ const classList1 = [
 		"Id":"197",
 		"Name":"Urama Goodness Ezechinemereihe",
 		"Matric":"2020/244419"
-	}
-{
+	},
+        {
 		"Id":"198",
 		"Name":"Mmenyene Eno Ndaeyo",
 		"Matric":"2020/243022"
